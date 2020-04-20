@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+
 import Todos from './components/Todos';
 
 import './App.css';
@@ -13,28 +14,28 @@ class App extends Component {
       {
         id: 1,
         title: 'sew a skirt',
-        completed: false
+        completed: false,
       },
       {
         id: 2,
         title: 'make frozen yogurt',
-        completed: true
+        completed: true,
       },
       {
         id: 3,
         title: 'go running',
-        completed: false
+        completed: false,
       },
-    ]
-  }
-  markComplete = () => {
-    console.log('From App.js')
-  }
+    ],
+  };
+  markComplete = (id) => {
+    console.log(id);
+  };
   render() {
     console.log(this.state.todos);
     return (
       <div className="App">
-        <Todos todos={this.state.todos} markComplete={this.markComplete}/> 
+        <Todos todos={this.state.todos} markComplete={this.markComplete} />
       </div>
     );
   }
