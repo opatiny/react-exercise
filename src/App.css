@@ -9,6 +9,29 @@ body {
   line-height: 1.4;
 }
 
-a {color: #333;
+a {
+  color: #333;
   text-decoration: none;
+}
+
+.container {
+  padding: 0 1rem;
+}
+
+.button {
+  display: inline-block;
+  border: none;
+  background: #555;
+  color: #fff;
+  padding: 7px 20px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #666;
+}
+
+.link {
+  font-family: 'Courier New', Courier, monospace;
+  color: blue;
 }

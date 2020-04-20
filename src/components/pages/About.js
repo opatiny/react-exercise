@@ -7,8 +7,10 @@ export default function About() {
       <h1>About</h1>
       <p>To Do List app v1.0.0.</p>
       <p>
-        Developed following this tutorial:
-        https://www.youtube.com/watch?v=sBws8MSXN7A.
+        Developed following this tutorial:{' '}
+        <a className="link" href="https://www.youtube.com/watch?v=sBws8MSXN7A">
+          https://www.youtube.com/watch?v=sBws8MSXN7A
+        </a>
       </p>
     </React.Fragment>
   );
