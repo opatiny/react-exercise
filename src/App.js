@@ -3,10 +3,10 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { v4 as uuidV4 } from 'uuid';
 
-import AddTodo from './components/AddTodo';
-import Todos from './components/Todos';
 import Header from './components/layout/Header';
 import About from './components/pages/About';
+import AddTodo from './components/todos/AddTodo';
+import Todos from './components/todos/Todos';
 
 import './App.css';
 
