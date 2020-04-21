@@ -1,3 +1,4 @@
+import Debug from 'debug';
 import React, { Component } from 'react';
 // Router is what handles the different urls to different pages
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -10,43 +11,33 @@ import About from './components/pages/About';
 
 import './App.css';
 
+const debug = Debug('App.js');
+
 // no render method?
 
 class App extends Component {
   state = {
-    todos: [
-      {
-        id: uuidV4(),
-        epoch: Date.now(),
-        title: 'sew a skirt',
-        completed: false,
-      },
-      {
-        id: uuidV4(),
-        epoch: Date.now(),
-        title: 'make frozen yogurt',
-        completed: false,
-      },
-      {
-        id: uuidV4(),
-        epoch: Date.now(),
-        title: 'go for a run',
-        completed: false,
-      },
-    ],
+    todos: [],
   };
 
   // Function that runs when the component is created
   componentDidMount() {
-    let rawData = window.localStorage.getItem('data');
-    this.setState = JSON.parse(rawData);
+    debug('Main component mounted');
+    const rawState = window.localStorage.getItem('data');
+    if (rawState !== null) {
+      this.setState(JSON.parse(rawState));
+    }
+    debug(this.state);
   }
 
   // Function that runs every time the component's state is modified
   componentDidUpdate() {
+    debug('Component updated');
+
     if (this.state) {
       window.localStorage.setItem('data', JSON.stringify(this.state));
     }
+    debug(this.state);
   }
 
   // Toggle the completed property of todos

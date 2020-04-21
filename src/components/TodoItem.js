@@ -14,6 +14,13 @@ export default class TodoItem extends Component {
       borderBottom: '1px #ccc dotted',
     };
   };
+  getButtonStyle = () => {
+    return {
+      background: this.props.todo.completed ? '#f4f4f4' : 'lightgreen',
+      cursor: 'pointer',
+      border: 'none',
+    };
+  };
   returnDate = (epoch) => {
     let date = new Date(epoch);
     return `${date.getFullYear()}.${
@@ -26,8 +33,10 @@ export default class TodoItem extends Component {
       <div style={this.getStyle()}>
         <p>
           <input
-            type="checkbox"
-            onChange={this.props.toggleCompleted.bind(this, id)}
+            type="button"
+            onClick={this.props.toggleCompleted.bind(this, id)}
+            value="    "
+            style={this.getButtonStyle()}
           />{' '}
           {this.returnDate(epoch)}
           {' : '}
