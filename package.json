@@ -41,7 +41,6 @@
     ]
   },
   "devDependencies": {
-    "debug": "^4.1.1",
     "eslint": "^6.8.0",
     "eslint-config-cheminfo-react": "^4.0.0",
     "eslint-plugin-import": "^2.20.2",
