@@ -24,6 +24,8 @@ Once the server is started, it will update automatically when changes are done i
 
 ### Storing data
 
+[Local Storage tutorial](https://blog.logrocket.com/the-complete-guide-to-using-localstorage-in-javascript-apps-ba44edb53a36/)
+
 It is possible to store data on a user's browser (approx 5Mb per web page). The page can be closed, or accessed from a different device and the data will be recovered. This is called "local storage". It is possible to inspect it from the js console, under "Application" -> "Local Storage".
 
 We use two functions, to read and write data to the local storage: `.setIdem()` and `.getItem()`. The data in local storage is organized as an object. Each entry has a key and a value, which must be a string. In our case, we want to store a JSON, so we have to stringify it after reading, and parse it before writing it to the local storage.
