@@ -2,7 +2,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # React exercise: to-do list web page
 
+Responsive web app allowing you to add things to do to a todo list. The entries are saved in Local Storage.
+
 Made following this tutorial: [https://www.youtube.com/watch?v=sBws8MSXN7A](https://www.youtube.com/watch?v=sBws8MSXN7A).
+
+## [Use the app](https://opatiny.github.io/react-todo-list/)
 
 ## Starting the server
 
@@ -20,7 +24,7 @@ Once the server is started, it will update automatically when changes are done i
 - `debug`(dev): for debug messages in the console
 - `serve`: To run the build folder.
 
-## Making an usable app out of the tutorial code
+## Making a usable app out of the tutorial code
 
 ### Storing data
 
@@ -43,6 +47,14 @@ window.localStorage.setItem('data', JSON.stringify(this.state));
 ### Building
 
 Once the code is working, you have to build it to make it stand-alone and usable by others.
+
+Add this line to `packages.json` to make paths relative:
+
+```json
+  "homepage": "./",
+```
+
+Build the project:
 
 ```bash
 npm run build
